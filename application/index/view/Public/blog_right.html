@@ -1,7 +1,7 @@
 <div class="col-lg-3">
     <div class="blog-single-sidebar bordered blog-container">
 
-        <form action="/search" method="get">
+        <form action="{$access_index_url}/search" method="get">
 
             <div class="blog-single-sidebar-search">
                 <div class="input-icon right">
@@ -21,7 +21,7 @@
                 {volist name="recent_article_list" id="vo"}
 
                     <li>
-                        <a  href="/single_page?cc={$vo.id}">{$vo.title}</a>
+                        <a  href="{$access_index_url}/single_page?cc={$vo.id}">{$vo.title}</a>
                     </li>
 
                 {/volist}
@@ -40,7 +40,7 @@
             </ul>
         </div>
         <div class="blog-single-sidebar-tags">
-            <h3 class="blog-sidebar-title uppercase" style="font-weight: 900;font-size: 30px;color: #111;">标签</h3>
+            <h3 class="blog-sidebar-title uppercase" style="font-weight: 900;font-size: 30px;color: #111;">标签云</h3>
             <ul class="blog-post-tags">
 
                 <?php
@@ -49,7 +49,7 @@
 
                     for($i = 0;$i < $count;$i++){
                        echo '<li class="uppercase">
-                                      <a  href="/tag?tag='.$tag_list[$i].'">'.$tag_list[$i].'</a>
+                                      <a  href="'.$access_index_url.'/tag?tag='.$tag_list[$i].'">'.$tag_list[$i].'</a>
                               </li>';
 
                     }

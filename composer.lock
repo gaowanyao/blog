@@ -8,19 +8,20 @@
     "packages": [
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.23",
+            "version": "v5.2.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4"
+                "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7115df4a6f76281109ebe352900c42403b728bb4",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4",
+                "url": "https://files.phpcomposer.com/files/PHPMailer/PHPMailer/2baf20b01690fba8cf720c1ebcf9b988eda50915.zip",
+                "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "php": ">=5.0.0"
             },
             "require-dev": {
@@ -80,20 +81,20 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15T19:32:56+00:00"
+            "time": "2017-08-28T11:12:07+00:00"
         },
         {
             "name": "topthink/framework",
-            "version": "v5.0.9",
+            "version": "v5.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "24ae4b9042bf9acfd041eb34602b14eb8669bc3f"
+                "reference": "926c9edb0c2682b14f563cac2c8a93f42f729016"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/24ae4b9042bf9acfd041eb34602b14eb8669bc3f",
-                "reference": "24ae4b9042bf9acfd041eb34602b14eb8669bc3f",
+                "url": "https://files.phpcomposer.com/files/top-think/framework/926c9edb0c2682b14f563cac2c8a93f42f729016.zip",
+                "reference": "926c9edb0c2682b14f563cac2c8a93f42f729016",
                 "shasum": ""
             },
             "require": {
@@ -131,7 +132,7 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2017-05-20T10:43:04+00:00"
+            "time": "2017-09-13T03:30:29+00:00"
         },
         {
             "name": "topthink/think-installer",
@@ -243,16 +244,16 @@
         },
         {
             "name": "workerman/phpsocket.io",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/phpsocket.io.git",
-                "reference": "e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf"
+                "reference": "60656796076b90f9529f1859f91134a88d52dc75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/phpsocket.io/zipball/e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf",
-                "reference": "e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf",
+                "url": "https://files.phpcomposer.com/files/walkor/phpsocket.io/60656796076b90f9529f1859f91134a88d52dc75.zip",
+                "reference": "60656796076b90f9529f1859f91134a88d52dc75",
                 "shasum": ""
             },
             "require": {
@@ -273,23 +274,25 @@
             "keywords": [
                 "Socket.io"
             ],
-            "time": "2017-02-28T14:25:23+00:00"
+            "time": "2017-07-22T08:10:18+00:00"
         },
         {
             "name": "workerman/workerman",
-            "version": "v3.4.3",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/Workerman.git",
-                "reference": "9667e352cdf071820b90be5a754ea209222fd7cc"
+                "reference": "01aadefdc3e7bf65dd0956d1d876bc9d27cd9156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/Workerman/zipball/9667e352cdf071820b90be5a754ea209222fd7cc",
-                "reference": "9667e352cdf071820b90be5a754ea209222fd7cc",
+                "url": "https://files.phpcomposer.com/files/walkor/Workerman/01aadefdc3e7bf65dd0956d1d876bc9d27cd9156.zip",
+                "reference": "01aadefdc3e7bf65dd0956d1d876bc9d27cd9156",
                 "shasum": ""
             },
             "require": {
+                "ext-pcntl": "*",
+                "ext-posix": "*",
                 "php": ">=5.3"
             },
             "suggest": {
@@ -319,7 +322,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2017-06-20T15:20:40+00:00"
+            "time": "2017-08-25T08:26:28+00:00"
         }
     ],
     "packages-dev": [],

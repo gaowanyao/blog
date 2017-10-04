@@ -80,7 +80,7 @@ class Index extends Controller
         $data['password'] = md5($_POST['password']);
         unset($data['username']);
         unset($data['remember']);
-        $sel = Db::name("User")->field("uid,user_name,user_name,fullname,email,address,country,admin")->where($data)->find();
+        $sel = Db::name("User")->where($data)->find();
         if($sel){
 //            $data['create_time'] = date("Y-m-d H:i:s");
 //            $data['uid'] = $sel['uid'];
@@ -209,6 +209,18 @@ class Index extends Controller
         return $this->fetch();
     }
 
+    /**
+     * author gcan
+     * description 网站配置
+     * @return mixed
+     */
+    public function gcan_config(){
+        $this->message();
+
+
+
+        return $this->fetch();
+    }
 
 
     public function delete_article(){

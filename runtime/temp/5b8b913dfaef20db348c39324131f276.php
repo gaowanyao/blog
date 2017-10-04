@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:82:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/index/add_article.html";i:1505993423;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/header.html";i:1505362353;s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/left.html";i:1505993688;s:85:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_sidebar.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/footer.html";i:1505362353;s:81:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_nav.html";i:1505362353;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:82:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/index/add_article.html";i:1506262426;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/header.html";i:1505362353;s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/left.html";i:1506263044;s:85:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_sidebar.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/footer.html";i:1505362353;s:81:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_nav.html";i:1505362353;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -12,9 +12,9 @@
     <title>Blog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="#1 selling multi-purpose bootstrap admin theme sold in themeforest marketplace packed with angularjs, material design, rtl support with over thausands of templates and ui elements and plugins to power any type of web applications including saas and admin dashboards. Preview page of Theme #1 for blog listing page"
+    <meta content="gcan"
           name="description" />
-    <meta content="" name="author" />
+    <meta content="gcan" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />-->
     <link href="__STATIC__/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -548,7 +548,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item  ">
+            <li class="nav-item  " style="display: none;">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-pointer"></i>
                     <span class="title">Maps</span>
@@ -569,10 +569,31 @@
             </li>
 
             <li class="heading">
+                <h3 class="uppercase">配置</h3>
+            </li>
+
+            <li class="nav-item  <?php if('article' == 'config'){ echo ' active open';} ?>">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">配置管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  <?php if('add_article' == 'gcan_config'){ echo ' active open';} ?>">
+                        <a href="gcan_config" class="nav-link ">
+                            <span class="title">网站配置</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="heading" style="display: none;">
                 <h3 class="uppercase">Pages</h3>
             </li>
 
-            <li class="nav-item" >
+            <li class="nav-item" style="display: none;">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-social-dribbble"></i>
                     <span class="title">General</span>

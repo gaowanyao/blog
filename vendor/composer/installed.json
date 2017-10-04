@@ -43,107 +43,6 @@
         ]
     },
     {
-        "name": "topthink/framework",
-        "version": "v5.0.9",
-        "version_normalized": "5.0.9.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/top-think/framework.git",
-            "reference": "24ae4b9042bf9acfd041eb34602b14eb8669bc3f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/top-think/framework/zipball/24ae4b9042bf9acfd041eb34602b14eb8669bc3f",
-            "reference": "24ae4b9042bf9acfd041eb34602b14eb8669bc3f",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0",
-            "topthink/think-installer": "~1.0"
-        },
-        "require-dev": {
-            "johnkary/phpunit-speedtrap": "^1.0",
-            "mikey179/vfsstream": "~1.6",
-            "phpdocumentor/reflection-docblock": "^2.0",
-            "phploc/phploc": "2.*",
-            "phpunit/phpunit": "4.8.*",
-            "sebastian/phpcpd": "2.*"
-        },
-        "time": "2017-05-20T10:43:04+00:00",
-        "type": "think-framework",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "think\\": "library/think"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "liu21st",
-                "email": "liu21st@gmail.com"
-            }
-        ],
-        "description": "the new thinkphp framework",
-        "homepage": "http://thinkphp.cn/",
-        "keywords": [
-            "framework",
-            "orm",
-            "thinkphp"
-        ]
-    },
-    {
-        "name": "workerman/workerman",
-        "version": "v3.4.3",
-        "version_normalized": "3.4.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/walkor/Workerman.git",
-            "reference": "9667e352cdf071820b90be5a754ea209222fd7cc"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/walkor/Workerman/zipball/9667e352cdf071820b90be5a754ea209222fd7cc",
-            "reference": "9667e352cdf071820b90be5a754ea209222fd7cc",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3"
-        },
-        "suggest": {
-            "ext-event": "For better performance. "
-        },
-        "time": "2017-06-20T15:20:40+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Workerman\\": "./"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "walkor",
-                "email": "walkor@workerman.net",
-                "homepage": "http://www.workerman.net",
-                "role": "Developer"
-            }
-        ],
-        "description": "An asynchronous event driven PHP framework for easily building fast, scalable network applications.",
-        "homepage": "http://www.workerman.net",
-        "keywords": [
-            "asynchronous",
-            "event-loop"
-        ]
-    },
-    {
         "name": "topthink/think-worker",
         "version": "v1.0.1",
         "version_normalized": "1.0.1.0",
@@ -215,25 +114,128 @@
         "homepage": "http://www.workerman.net"
     },
     {
-        "name": "workerman/phpsocket.io",
-        "version": "v1.1.4",
-        "version_normalized": "1.1.4.0",
+        "name": "topthink/framework",
+        "version": "v5.0.11",
+        "version_normalized": "5.0.11.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/walkor/phpsocket.io.git",
-            "reference": "e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf"
+            "url": "https://github.com/top-think/framework.git",
+            "reference": "926c9edb0c2682b14f563cac2c8a93f42f729016"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/walkor/phpsocket.io/zipball/e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf",
-            "reference": "e814c4626f05ea6727ee8f2f4d2cb3fb0b5c43cf",
+            "url": "https://files.phpcomposer.com/files/top-think/framework/926c9edb0c2682b14f563cac2c8a93f42f729016.zip",
+            "reference": "926c9edb0c2682b14f563cac2c8a93f42f729016",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "topthink/think-installer": "~1.0"
+        },
+        "require-dev": {
+            "johnkary/phpunit-speedtrap": "^1.0",
+            "mikey179/vfsstream": "~1.6",
+            "phpdocumentor/reflection-docblock": "^2.0",
+            "phploc/phploc": "2.*",
+            "phpunit/phpunit": "4.8.*",
+            "sebastian/phpcpd": "2.*"
+        },
+        "time": "2017-09-13T03:30:29+00:00",
+        "type": "think-framework",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "think\\": "library/think"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "liu21st",
+                "email": "liu21st@gmail.com"
+            }
+        ],
+        "description": "the new thinkphp framework",
+        "homepage": "http://thinkphp.cn/",
+        "keywords": [
+            "framework",
+            "orm",
+            "thinkphp"
+        ]
+    },
+    {
+        "name": "workerman/workerman",
+        "version": "v3.5.1",
+        "version_normalized": "3.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/walkor/Workerman.git",
+            "reference": "01aadefdc3e7bf65dd0956d1d876bc9d27cd9156"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/walkor/Workerman/01aadefdc3e7bf65dd0956d1d876bc9d27cd9156.zip",
+            "reference": "01aadefdc3e7bf65dd0956d1d876bc9d27cd9156",
+            "shasum": ""
+        },
+        "require": {
+            "ext-pcntl": "*",
+            "ext-posix": "*",
+            "php": ">=5.3"
+        },
+        "suggest": {
+            "ext-event": "For better performance. "
+        },
+        "time": "2017-08-25T08:26:28+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Workerman\\": "./"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "walkor",
+                "email": "walkor@workerman.net",
+                "homepage": "http://www.workerman.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "An asynchronous event driven PHP framework for easily building fast, scalable network applications.",
+        "homepage": "http://www.workerman.net",
+        "keywords": [
+            "asynchronous",
+            "event-loop"
+        ]
+    },
+    {
+        "name": "workerman/phpsocket.io",
+        "version": "v1.1.5",
+        "version_normalized": "1.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/walkor/phpsocket.io.git",
+            "reference": "60656796076b90f9529f1859f91134a88d52dc75"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/walkor/phpsocket.io/60656796076b90f9529f1859f91134a88d52dc75.zip",
+            "reference": "60656796076b90f9529f1859f91134a88d52dc75",
             "shasum": ""
         },
         "require": {
             "workerman/channel": ">=1.0.0",
             "workerman/workerman": ">=3.1.8"
         },
-        "time": "2017-02-28T14:25:23+00:00",
+        "time": "2017-07-22T08:10:18+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -252,20 +254,21 @@
     },
     {
         "name": "phpmailer/phpmailer",
-        "version": "v5.2.23",
-        "version_normalized": "5.2.23.0",
+        "version": "v5.2.25",
+        "version_normalized": "5.2.25.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "7115df4a6f76281109ebe352900c42403b728bb4"
+            "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7115df4a6f76281109ebe352900c42403b728bb4",
-            "reference": "7115df4a6f76281109ebe352900c42403b728bb4",
+            "url": "https://files.phpcomposer.com/files/PHPMailer/PHPMailer/2baf20b01690fba8cf720c1ebcf9b988eda50915.zip",
+            "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915",
             "shasum": ""
         },
         "require": {
+            "ext-ctype": "*",
             "php": ">=5.0.0"
         },
         "require-dev": {
@@ -291,7 +294,7 @@
         "suggest": {
             "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
         },
-        "time": "2017-03-15T19:32:56+00:00",
+        "time": "2017-08-28T11:12:07+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

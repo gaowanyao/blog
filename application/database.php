@@ -19,7 +19,7 @@ return [
     // 用户名
     'username'        => 'gcan_sql',
     // 密码
-    'password'        => 'gcan@007',
+    'password'        => 'gcan007',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/index/index.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/header.html";i:1505362353;s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/left.html";i:1505993688;s:85:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_sidebar.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/footer.html";i:1505362353;s:81:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_nav.html";i:1505362353;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/index/index.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/header.html";i:1505362353;s:76:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/left.html";i:1506263044;s:85:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_sidebar.html";i:1505362353;s:78:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/footer.html";i:1505362353;s:81:"/www/wwwroot/blog.gcan.top/public/../application/admin/view/Public/quick_nav.html";i:1505362353;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -542,7 +542,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item  ">
+            <li class="nav-item  " style="display: none;">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-pointer"></i>
                     <span class="title">Maps</span>
@@ -563,10 +563,31 @@
             </li>
 
             <li class="heading">
+                <h3 class="uppercase">配置</h3>
+            </li>
+
+            <li class="nav-item  <?php if('[active]' == 'config'){ echo ' active open';} ?>">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">配置管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  <?php if('[open]' == 'gcan_config'){ echo ' active open';} ?>">
+                        <a href="gcan_config" class="nav-link ">
+                            <span class="title">网站配置</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="heading" style="display: none;">
                 <h3 class="uppercase">Pages</h3>
             </li>
 
-            <li class="nav-item" >
+            <li class="nav-item" style="display: none;">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-social-dribbble"></i>
                     <span class="title">General</span>

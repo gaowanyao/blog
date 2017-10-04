@@ -139,11 +139,15 @@ class Select implements EventInterface
                 break;
             case self::EV_TIMER:
             case self::EV_TIMER_ONCE:
+                $timer_id = $this->_timerId++;
                 $run_time = microtime(true) + $fd;
-                $this->_scheduler->insert($this->_timerId, -$run_time);
-                $this->_eventTimer[$this->_timerId] = array($func, (array)$args, $flag, $fd);
-                $this->tick();
-                return $this->_timerId++;
+                $this->_scheduler->insert($timer_id, -$run_time);
+                $this->_eventTimer[$timer_id] = array($func, (array)$args, $flag, $fd);
+                $select_timeout = ($run_time - microtime(true)) * 1000000;
+                if( $this->_selectTimeout > $select_timeout ){ 
+                    $this->_selectTimeout = $select_timeout;   
+                }  
+                return $timer_id;
         }
 
         return true;
@@ -314,5 +318,15 @@ class Select implements EventInterface
     public function destroy()
     {
 
+    }
+
+    /**
+     * Get timer count.
+     *
+     * @return integer
+     */
+    public function getTimerCount()
+    {
+        return count($this->_eventTimer);
     }
 }

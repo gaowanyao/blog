@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/signup.html";i:1505912309;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/signup.html";i:1506175897;}*/ ?>
 <!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
@@ -12,8 +12,8 @@
     <meta charset="utf-8" />
 
     <title>GCAN--注册</title>
-    <meta name="360-site-verification" content="7f05d3a97face6dead034a0a940ff598" />
-    <meta name="keywords" content="高万耀,阿耀王子,PHP开发,COCOS开发,区块链,网站开发,nodejs,gcan"/>
+
+    <meta name="keywords" content="高万耀,阿耀王子,区块链,gcan,网站开发,PHP开发,laravel开发,thinkphp开发,nodejs"/>
     <meta name="description" content="写写博客，记录生活的点点滴滴" />
     <meta name="author" content="高万耀" />
 
@@ -24,7 +24,7 @@
 
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />-->
     <link href="__STATIC__/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="__STATIC__/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
     <link href="__STATIC__/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -71,7 +71,7 @@
     </form>
     <!-- END FORGOT PASSWORD FORM -->
     <!-- BEGIN REGISTRATION FORM -->
-    <form style="display: block;" class="register-form" action="signup_msg" method="post">
+    <form style="display: block;" class="register-form" action="<?php echo $access_index_url; ?>/signup_msg" method="post">
         <h3 class="font-green">Sign Up</h3>
 
 
@@ -103,7 +103,7 @@
             <div id="register_tnc_error"> </div>
         </div>
         <div class="form-actions">
-            <a href="signin.html"  class="btn green btn-outline">Back</a>
+            <a href="<?php echo $access_index_url; ?>/signin.html"  class="btn green btn-outline">Back</a>
             <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">Submit</button>
         </div>
     </form>

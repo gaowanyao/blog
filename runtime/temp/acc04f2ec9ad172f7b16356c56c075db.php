@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/tag.html";i:1505837101;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/header.html";i:1505978966;s:83:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/index_right.html";i:1505837223;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/footer.html";i:1505896522;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/tag.html";i:1506175342;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/header.html";i:1507047130;s:83:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/index_right.html";i:1507030555;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/footer.html";i:1505896522;}*/ ?>
 <!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
@@ -14,7 +14,7 @@
 
 
     <title><?php echo $tag; ?></title>
-    <meta name="keywords" content="高万耀,阿耀王子,PHP开发,COCOS开发,区块链,网站开发,nodejs,gcan"/>
+    <meta name="keywords" content="高万耀,阿耀王子,区块链,gcan,网站开发,PHP开发,laravel开发,thinkphp开发,nodejs"/>
     <meta name="description" content="写写博客，记录生活的点点滴滴" />
     <meta name="author" content="高万耀" />
 
@@ -49,7 +49,12 @@
 <div class="page-wrapper">
 
     <!-- BEGIN HEADER -->
-    
+    <!--http://www.pfinal.cn/subject/laravel-basic-->
+<!--https://connect.qq.com/-->
+<!--https://connect.qq.com/manage.html#/-->
+<!--https://github.com/lixuancn/LaneWeChat-->
+<!--http://lanewechat.lanecn.com/doc/main/aid-1-->
+<!--https://packagist.org/packages/lixuancn/lanewechat-->
 <style>
 
 
@@ -385,7 +390,7 @@
                             </li>
 
                             <li  style="<?php if($switch == 'on'){ echo 'display:none'; }?>" class="dropdown dropdown-extended dropdown-inbox dropdown-dark" >
-                                <a href="/signin" class="dropdown-toggle" >
+                                <a href="<?php echo $access_index_url; ?>/signin" class="dropdown-toggle" >
                                     登录
                                 </a>
 
@@ -397,7 +402,7 @@
 
                             </li>
                             <li style="<?php if($switch == 'on'){ echo 'display:none'; }?>" class="dropdown dropdown-extended dropdown-inbox dropdown-dark" >
-                                <a href="/signup" class="dropdown-toggle" >
+                                <a href="<?php echo $access_index_url; ?>/signup" class="dropdown-toggle" >
                                     注册
                                 </a>
 
@@ -409,7 +414,8 @@
                             <li style="<?php if($switch == 'off'){ echo 'display:none'; }?>" class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <!--<img alt="" class="img-circle" src="__STATIC__/assets/layouts/layout3/img/avatar9.jpg">-->
-                                    <img style="max-width:50px;" alt="" class="img-circle" src="__STATIC__/img/kaola.jpg">
+                                    <img style="max-width:50px;" alt="head" class="img-circle"  src="<?php  echo $account['headpicture']; ?>"  onerror="javascript:this.src='__STATIC__/img/kaola.jpg';"  />
+
                                     <span class="username username-hide-mobile">
 
                                     <?php echo $account['user_name']; ?>
@@ -444,7 +450,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $access; ?>logout.html">
+                                        <a href="<?php echo $access_index_url; ?>/logout.html">
                                             <i class="icon-key"></i> 退出
                                         </a>
                                     </li>
@@ -467,7 +473,7 @@
             <div class="page-header-menu">
                 <div class="container">
                     <!-- BEGIN HEADER SEARCH BOX -->
-                    <form class="search-form" action="search" method="GET">
+                    <form class="search-form" action="<?php echo $access_index_url; ?>/search" method="GET">
                         <div class="input-group">
                             <input style="color: skyblue;" type="text" class="form-control" placeholder="Search"  name="search">
                             <span class="input-group-btn">
@@ -512,62 +518,42 @@
                                 <a href="javascript:;"> laravel
                                     <span class="arrow"></span>
                                 </a>
+
                                 <ul class="dropdown-menu pull-left">
-                                    <li class="dropdown-submenu ">
+                                    <li class=" ">
                                         <a href="https://d.laravel-china.org/docs/5.4/about" class="nav-link nav-toggle ">
                                             <i class="icon-graph"></i> 中文文档
+                                            <!--<span class="arrow"></span>-->
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-submenu ">
+                                        <a href="javascript:;" class="nav-link nav-toggle ">
+                                            <i class="icon-graph"></i> 教程
                                             <span class="arrow"></span>
                                         </a>
-                                        <ul class="dropdown-menu" style="display: none;">
+                                        <ul class="dropdown-menu">
                                             <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Bootstrap Form
-                                                    <br>Controls </a>
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=46.html" class="nav-link ">安装及配置</a>
                                             </li>
                                             <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Material Design
-                                                    <br>Form Controls </a>
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=47.html" class="nav-link ">框架运行机制</a>
                                             </li>
                                             <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form Validation </a>
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=48.html" class="nav-link ">变量和超链接</a>
                                             </li>
+
                                             <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Material Design
-                                                    <br>Form Validation States </a>
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=49.html" class="nav-link ">控制器</a>
                                             </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Material Design
-                                                    <br>Form Validation </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form Layouts </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form Repeater </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form Input Mask </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form X-editable </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Form Wizard </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> iCheck Controls </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Image Cropping </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Multiple File Upload </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="javascript:;" class="nav-link "> Dropzone File Upload </a>
-                                            </li>
+
                                         </ul>
                                     </li>
+
+
                                 </ul>
+
+
                             </li>
 
                             <li class="menu-dropdown classic-menu-dropdown " style="display: none;">
@@ -863,12 +849,12 @@
 
                                                 <div class="blog-post-content">
                                                     <h2 class="blog-title blog-post-title">
-                                                        <a href="/single_page?cc=<?php echo $vo['id']; ?>.html"><?php echo $vo['title']; ?></a>
+                                                        <a href="<?php echo $access_index_url; ?>/single_page?cc=<?php echo $vo['id']; ?>.html"><?php echo $vo['title']; ?></a>
                                                     </h2>
 
                                                     <div class="row">
                                                         <div class="blog-img-thumb col-lg-2 col-md-2  col-sm-2 col-xs-12" style="height: 113px;margin-bottom:10px;">
-                                                            <a href="/single_page?cc=<?php echo $vo['id']; ?>.html">
+                                                            <a href="<?php echo $access_index_url; ?>/single_page?cc=<?php echo $vo['id']; ?>.html">
                                                                 <!--<img style="height: 153px;" src="__STATIC__/assets/pages/img/page_general_search/4.jpg" />-->
                                                                 <img style="width: 90%;height: 100%;" alt="<?php echo $vo['title']; ?>" title="<?php echo $vo['title']; ?>" src="<?php echo $vo['article_picture']; ?>" onerror="javascript:this.src='__STATIC__/img/kaola.jpg';"  />
                                                                 <!--<img style="width: 100%;height: 100%;" src="__STATIC__/img/kaola.jpg" />-->
@@ -892,7 +878,7 @@
                                                         </div>
 
                                                         <div style="text-indent: 1em;">
-                                                            <a href="/single_page?cc=<?php echo $vo['id']; ?>.html" class="btn blue" style="margin-top:10px;margin-bottom:10px;">
+                                                            <a href="<?php echo $access_index_url; ?>/single_page?cc=<?php echo $vo['id']; ?>.html" class="btn blue" style="margin-top:10px;margin-bottom:10px;">
                                                                 阅读原文<i style="font-size: 16px;" class="fa  fa-arrow-circle-right"></i>
                                                             </a>
                                                         </div>
@@ -921,7 +907,7 @@
                                                             for($i=0;$i<count($arr);$i++){
                                                                 if($arr[$i] == ''){}else{
                                                                     $str .= "<li class='uppercase'>
-                                                            <a href='/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
+                                                            <a href='".$access_index_url."/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
                                                             </li>";
                                                             }
                                                             }
@@ -973,7 +959,7 @@
 
                                         </div>
 
-                                        <div class="col-lg-3 col-md-3  col-sm-3 col-xs-12">
+                                        <div class="col-lg-3 col-md-12  col-sm-12 col-xs-12">
     <div class="row">
         <div class="col-sm-12">
             <div class="blog-quote bordered blog-container">
@@ -1063,7 +1049,7 @@
         <div class="col-sm-12">
             <div class="blog-post-sm bordered blog-container">
                 <div class="blog-img-thumb">
-                    <a href="/single_page?cc=<?php echo $vo['id']; ?>.html">
+                    <a href="<?php echo $access_index_url; ?>/single_page?cc=<?php echo $vo['id']; ?>.html">
                         <!--<img src="__STATIC__/assets/pages/img/page_general_search/1.jpg" />-->
                         <img alt="<?php echo $vo['title']; ?>" title="<?php echo $vo['title']; ?>" style="width: 100%;height: 100%;" src="<?php if($vo['article_picture']!=''){echo $vo['article_picture']; }else{ echo '__STATIC__/img/kaola.jpg';}?>" onerror="javascript:this.src='__STATIC__/img/kaola.jpg';" />
 
@@ -1071,7 +1057,7 @@
                 </div>
                 <div class="blog-post-content">
                     <h2 class="blog-title blog-post-title">
-                        <a href="/single_page?cc=<?php echo $vo['id']; ?>.html"><?php echo $vo['title']; ?></a>
+                        <a href="<?php echo $access_index_url; ?>/single_page?cc=<?php echo $vo['id']; ?>.html"><?php echo $vo['title']; ?></a>
                     </h2>
                     <div class="blog-post-desc" style="height: 95px !important;overflow:hidden;">
 

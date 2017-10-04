@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
 
     <title>{$article.title}</title>
-    <meta name="keywords" content="高万耀,阿耀王子,PHP开发,COCOS开发,区块链,网站开发,nodejs,gcan"/>
+    <meta name="keywords" content="高万耀,阿耀王子,区块链,gcan,网站开发,PHP开发,laravel开发,thinkphp开发,nodejs"/>
     <meta name="description" content="写写博客，记录生活的点点滴滴" />
     <meta name="author" content="高万耀" />
 
@@ -46,6 +46,16 @@
     <!-- END THEME LAYOUT STYLES -->
     <link rel="shortcut icon" href="__STATIC__/gcan.ico" />
 
+
+    <style>
+
+        .blog-single-desc p{
+            /*padding:0px !important;*/
+            margin:0px !important;
+        }
+
+
+    </style>
 
 
 </head>
@@ -125,12 +135,18 @@
                                                 <!--</div>-->
 
 
-                                                <div class="blog-single-desc">
+                                                <div class="blog-single-desc" style="word-wrap:break-word;">
                                                     <!--<div class="" style="color:#000000;">-->
                                                     <?php
 
-                                                  echo file_get_contents(ROOT_PATH."public/static/article/".$article['content'].".html");
 
+
+                                                  try {
+                                                         echo $blog_file = file_get_contents(ROOT_PATH."public/static/article/".$article['content'].".html");
+                                                    }
+                                                    catch (Exception $e) {
+                                                        header("Location:/404.html");
+                                                    }
 
                                                 ?>
                                                 </div>
@@ -146,7 +162,7 @@
                                                     for($i=0;$i<count($arr);$i++){
                                                         if($arr[$i] == ''){}else{
                                                             $str .= "<li class='uppercase'>
-                                                        <a href='/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
+                                                        <a href='".$access_index_url."/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
                                                         </li>";
                                                         }
                                                         }

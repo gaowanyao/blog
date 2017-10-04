@@ -11,8 +11,7 @@
     <meta charset="utf-8" />
 
     <title>GCAN--登录</title>
-    <meta name="360-site-verification" content="7f05d3a97face6dead034a0a940ff598" />
-    <meta name="keywords" content="高万耀,阿耀王子,PHP开发,COCOS开发,区块链,网站开发,nodejs,gcan"/>
+    <meta name="keywords" content="高万耀,阿耀王子,区块链,gcan,网站开发,PHP开发,laravel开发,thinkphp开发,nodejs"/>
     <meta name="description" content="写写博客，记录生活的点点滴滴" />
     <meta name="author" content="高万耀" />
 
@@ -54,13 +53,13 @@
         </div>
         <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
             <div class="login-content">
-                <h1>Gcan admin login </h1>
+                <h1>GCAN Blog Login </h1>
                 <p>
 
-                    This is a backend login interface, the blog system is under construction.
+                    This is a login interface, the blog system is under construction.
 
                 </p>
-                <form action="signin_msg" class="login-form" method="post">
+                <form action="{$access_index_url}/signin_msg" class="login-form" method="post">
                     <div class="alert alert-danger display-hide">
                         <button class="close" data-close="alert"></button>
                         <span>Enter any username and password. </span>
@@ -85,7 +84,7 @@
                                 <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
                             </div>
                             <button class="btn green" type="submit">Sign In</button>
-                            <a href="signup.html" class="btn green" >Sign Up</a>
+                            <a href="{$access_index_url}/signup.html" class="btn green" >Sign Up</a>
                         </div>
                     </div>
                 </form>
@@ -104,23 +103,52 @@
             </div>
             <div class="login-footer">
                 <div class="row bs-reset">
+                    <div class="col-md-12" style="text-align: center;">
+                        <h4>第三方登录<small>目前只有Github登录</small></h4>
+                    </div>
                     <div class="col-xs-5 bs-reset">
+
                         <ul class="login-social">
                             <li>
-                                <a href="javascript:;">
-                                    <i class="icon-social-facebook"></i>
+                                <a href="https://github.com/login/oauth/authorize?client_id=0e6c48aa74fcabe9c624&state=12345&redirect_uri=http://www.gcan.top/index/auth/githubauth
+" title="Github登录">
+                                    <i style="color:tomato;" class="fa fa-github"></i>
                                 </a>
+
                             </li>
                             <li>
-                                <a href="javascript:;">
-                                    <i class="icon-social-twitter"></i>
+                                <a href="javascript:;" title="微信登录">
+                                    <i style="color:tomato;" class="fa fa-wechat"></i>
                                 </a>
+
                             </li>
                             <li>
-                                <a href="javascript:;">
-                                    <i class="icon-social-dribbble"></i>
+                                <a href="javascript:;" title="QQ登录">
+                                    <i style="color:tomato;" class="fa fa-qq"></i>
                                 </a>
+
                             </li>
+                            <li>
+                                <a href="javascript:;" title="微博登录">
+                                    <i style="color:tomato;" class="fa fa-weibo"></i>
+                                </a>
+
+                            </li>
+                            <!--<li>-->
+                                <!--<a href="javascript:;">-->
+                                    <!--<i class="icon-social-facebook"></i>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="javascript:;">-->
+                                    <!--<i class="icon-social-twitter"></i>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="javascript:;">-->
+                                    <!--<i class="icon-social-dribbble"></i>-->
+                                <!--</a>-->
+                            <!--</li>-->
                         </ul>
                     </div>
                     <div class="col-xs-7 bs-reset">

@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-md-3  col-sm-3 col-xs-12">
+<div class="col-lg-3 col-md-12  col-sm-12 col-xs-12">
     <div class="row">
         <div class="col-sm-12">
             <div class="blog-quote bordered blog-container">
@@ -88,7 +88,7 @@
         <div class="col-sm-12">
             <div class="blog-post-sm bordered blog-container">
                 <div class="blog-img-thumb">
-                    <a href="/single_page?cc={$vo.id}.html">
+                    <a href="{$access_index_url}/single_page?cc={$vo.id}.html">
                         <!--<img src="__STATIC__/assets/pages/img/page_general_search/1.jpg" />-->
                         <img alt="{$vo.title}" title="{$vo.title}" style="width: 100%;height: 100%;" src="<?php if($vo['article_picture']!=''){echo $vo['article_picture']; }else{ echo '__STATIC__/img/kaola.jpg';}?>" onerror="javascript:this.src='__STATIC__/img/kaola.jpg';" />
 
@@ -96,7 +96,7 @@
                 </div>
                 <div class="blog-post-content">
                     <h2 class="blog-title blog-post-title">
-                        <a href="/single_page?cc={$vo.id}.html">{$vo.title}</a>
+                        <a href="{$access_index_url}/single_page?cc={$vo.id}.html">{$vo.title}</a>
                     </h2>
                     <div class="blog-post-desc" style="height: 95px !important;overflow:hidden;">
 

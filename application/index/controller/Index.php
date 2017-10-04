@@ -13,43 +13,7 @@ class Index extends Controller
 
 
 
-    public function githubtoken(){
-        dump($_GET);
 
-    }
-
-
-    public function githubauth(){
-//        http://blog.csdn.net/javagaorui5944/article/details/52918772
-//        https://github.com/login/oauth/authorize?client_id=0e6c48aa74fcabe9c624&state=12345&redirect_uri=http://www.gcan.top/githubauth
-
-        dump($_GET);
-
-        if(isset($_GET['code'])){
-            $url = 'https://github.com/login/oauth/access_token?client_id=0e6c48aa74fcabe9c624&client_secret=4506f04f4f66dc32802cc95ddcb57cef77e75472&code='.$_GET['code'].'&redirect_uri=http://www.gcan.top/githubauth';
-
-            $result = http_curl($url);
-            dump($result);
-
-
-//            $token_url = 'https://api.github.com/user?access_token='.$result;
-            $token_url = 'https://api.github.com/user?'.$result;
-
-            dump($token_url);
-            $info = http_curl($token_url);
-            dump($info);
-
-
-
-
-        }
-
-
-
-
-//        header('Location:https://github.com/login/oauth/access_token?client_id=0e6c48aa74fcabe9c624&client_secret=4506f04f4f66dc32802cc95ddcb57cef77e75472&code='.$_GET['code'].'&redirect_uri=http://www.gcan.top/githubtoken');
-
-    }
 
     /**
      * tp5邮件
@@ -68,72 +32,7 @@ class Index extends Controller
 
 
 
-    /**
-     * @param $url
-     * @param $type
-     * @param $jsonpost
-     * @return mixed|json
-     */
-    function http_curl($url, $type, $jsonpost)
-    {
 
-
-
-//        $this->log_time("http_start");
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_TIMEOUT,10);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-//        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, true);
-
-        //如果使用代理需加上属性
-//        if(C('IF_PROXY')==true){
-//            $str= $url;
-//
-//            $needle= '127.0.0.1';
-//
-//            $pos = strpos($str, $needle);
-//
-//            if($pos==false){
-//
-//                curl_setopt ($ch, CURLOPT_PROXY, C('PROXY'));
-//
-//                curl_setopt ($ch, CURLOPT_USERAGENT, C('USERAGENT'));
-//
-//            }
-//        }
-        if ($type == "post") {
-            //传输数据
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonpost);
-        }
-        $json = curl_exec($ch);
-        if (curl_errno($ch)) {
-            $json = curl_error($ch);
-            $json = json_encode($json, JSON_UNESCAPED_UNICODE);
-//            echo $json;
-        }
-        curl_close($ch);
-//        if (C('IF_PROXY') == true) {
-//
-//            $header = preg_replace('/{.*/i', "", $json);
-//
-//            if($header!=""){
-//
-//                $json = explode($header, $json);
-//
-//                $json = $json[1];
-//
-//            }
-//
-//        }
-//        $this->log_time("http_end");
-
-        return $json;
-    }
 
     public function firstcny_trade_msg(){
 
@@ -205,91 +104,6 @@ class Index extends Controller
         }
 
 
-//        if(Session::has("num")){
-//            dump("has");
-//            dump("has");
-//            Session::set("num",1);
-//
-//        }else{
-//            Session::set("num",1);
-//
-//            dump("not");
-//        }
-//        $num = Session::get("num");
-//
-//        if($num == 7.3  && $buy < 7.3){
-//            Session::set("num",1);
-//        }
-//
-//        if($num == 7.2  && $buy < 7.2){
-//            Session::set("num",1);
-//        }
-//
-//        if($num == 7.1  && $buy < 7.1){
-//            Session::set("num",1);
-//        }
-//
-//        if($num == 6.95  && $buy < 6.95){
-//            Session::set("num",1);
-//        }
-//
-//        if($num == 6.8  && $buy < 6.8){
-//            Session::set("num",1);
-//        }
-//
-//
-//
-//        if($num == 6.65  && $buy < 6.65){
-//            Session::set("num",1);
-//        }
-//
-//
-//        if($num == 6.5  && $buy < 6.5){
-//            Session::set("num",1);
-//        }
-//
-//
-//        dump($num);
-////++++++++++++++++++++++++++++++++++++++++++++++++++++
-//        if($buy >= 7.3 && $num == 1){
-//            Session::set("num",7.3);
-//        }
-//
-//        if($buy >= 7.2 && $buy < 7.3  && $num == 1){
-//            Session::set("num",7.2);
-//        }
-//
-//
-//        if($buy >= 7.1 && $buy < 7.2 && $num == 1){
-//            Session::set("num",7.1);
-//        }
-//
-//        if($buy >= 6.95 && $buy < 7.1 && $num == 1){
-//            Session::set("num",6.95);
-//        }
-//
-//
-//        if($buy >= 6.8 && $buy < 6.95 && $num == 1){
-//            Session::set("num",6.8);
-//        }
-//
-//        if($buy >= 6.65 && $buy < 6.8 && $num == 1){
-//            Session::set("num",6.65);
-//        }
-//
-//        if($buy >= 6.5 && $buy < 6.65 && $num == 1){
-//            Session::set("num",6.5);
-//        }
-//
-//
-//        $num = Session::get("num");
-//
-//        dump($num);
-//
-//
-//        dump($result);
-
-
     }
 
 
@@ -302,7 +116,18 @@ class Index extends Controller
 
 //    查询页
     public function search(){
+
+        if(empty($_GET['search'])){
+            if(Session::has('search')){
+                $_GET['search'] = Session::get('search');
+            }
+        }
+
         if(!empty($_GET['search'] && isset($_GET['search']))) {
+
+
+            $search = $_GET['search'];
+            Session::set('search',$search);
 
             $this->message();
             $this->recent_article();//近期文章
@@ -370,7 +195,8 @@ class Index extends Controller
 
         }
 
-        $this->assign("access","/");
+
+        $this->assign("access_index_url","/index/index");
 
 
     }
@@ -410,11 +236,13 @@ class Index extends Controller
     }
 
     public function signin(){
+        $this->assign("access_index_url","/index/index");
 
         return $this->fetch();
     }
 
     public function signup(){
+        $this->assign("access_index_url","/index/index");
 
         return $this->fetch();
     }
@@ -429,7 +257,7 @@ class Index extends Controller
         $data['password'] = md5($_POST['password']);
         unset($data['username']);
         unset($data['remember']);
-        $sel = Db::name("User")->field("uid,active,user_name,user_name,fullname,email,address,country,admin,headpicture")->where("user_name|email","like",$data['user_name'])->where("password",$data['password'])->find();
+        $sel = Db::name("User")->where("user_name|email","like",$data['user_name'])->where("password",$data['password'])->find();
         if($sel){
 //            $data['create_time'] = date("Y-m-d H:i:s");
 //            $data['uid'] = $sel['uid'];
@@ -504,7 +332,7 @@ class Index extends Controller
                     $toemail = $_POST['email'];
                     $name = $data['user_name'];
                     $subject='GCAN激活邮件';
-                    $a = Config::get('domain')."/mail?cc=".urlsafe_b64encode(urlsafe_b64encode($toemail))."&vv=".urlsafe_b64encode(time())."&ccvv=".sha1($subject);
+                    $a = Config::get('domain')."/index/index/mail?cc=".urlsafe_b64encode(urlsafe_b64encode($toemail))."&vv=".urlsafe_b64encode(time())."&ccvv=".sha1($subject);
                     $content='您好，'.$name."!<br/>欢迎加入GCAN，请点击下面的链接来激活您的邮件。
                         <br/><a href='".$a."'>".$a."</a><br/>如果您的邮箱不支持链接点击，请将以上链接地址拷贝到您的浏览器地址栏中进行激活！<br/>";
 

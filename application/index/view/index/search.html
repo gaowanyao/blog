@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
 
     <title>{$search}</title>
-    <meta name="keywords" content="高万耀,阿耀王子,PHP开发,COCOS开发,区块链,网站开发,nodejs,gcan"/>
+    <meta name="keywords" content="高万耀,阿耀王子,区块链,gcan,网站开发,PHP开发,laravel开发,thinkphp开发,nodejs"/>
     <meta name="description" content="写写博客，记录生活的点点滴滴" />
     <meta name="author" content="高万耀" />
 
@@ -109,12 +109,12 @@
 
                                                 <div class="blog-post-content">
                                                     <h2 class="blog-title blog-post-title">
-                                                        <a href="single_page?cc={$vo.id}.html">{$vo.title}</a>
+                                                        <a href="{$access_index_url}/single_page?cc={$vo.id}.html">{$vo.title}</a>
                                                     </h2>
 
                                                     <div class="row">
                                                         <div class="blog-img-thumb col-lg-2 col-md-2  col-sm-2 col-xs-12" style="height: 113px;margin-bottom:10px;">
-                                                            <a href="/single_page?cc={$vo.id}.html">
+                                                            <a href="{$access_index_url}/single_page?cc={$vo.id}.html">
                                                                 <!--<img style="height: 153px;" src="__STATIC__/assets/pages/img/page_general_search/4.jpg" />-->
                                                                 <img style="width: 90%;height: 100%;" alt="{$vo.title}" title="{$vo.title}" src="{$vo.article_picture}" onerror="javascript:this.src='__STATIC__/img/kaola.jpg';"  />
                                                                 <!--<img style="width: 100%;height: 100%;" src="__STATIC__/img/kaola.jpg" />-->
@@ -137,7 +137,7 @@
                                                         </div>
 
                                                         <div style="text-indent: 2em;">
-                                                            <a href="/single_page?cc={$vo.id}.html" class="btn blue" style="margin-top:10px;margin-bottom:10px;">
+                                                            <a href="{$access_index_url}/single_page?cc={$vo.id}.html" class="btn blue" style="margin-top:10px;margin-bottom:10px;">
                                                                 阅读原文<i style="font-size: 16px;" class="fa  fa-arrow-circle-right"></i>
                                                             </a>
                                                         </div>
@@ -166,7 +166,7 @@
                                                             for($i=0;$i<count($arr);$i++){
                                                                 if($arr[$i] == ''){}else{
                                                                     $str .= "<li class='uppercase'>
-                                                            <a href='/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
+                                                            <a href='".$access_index_url."/tag?tag=".$arr[$i]."'>".$arr[$i]."</a>
                                                             </li>";
                                                             }
                                                             }
