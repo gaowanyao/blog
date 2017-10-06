@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:82:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/single_page.html";i:1507127173;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/header.html";i:1507132413;s:82:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/blog_right.html";i:1506178572;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/footer.html";i:1505896522;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:82:"/www/wwwroot/blog.gcan.top/public/../application/index/view/index/single_page.html";i:1507127173;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/header.html";i:1507306451;s:82:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/blog_right.html";i:1506178572;s:78:"/www/wwwroot/blog.gcan.top/public/../application/index/view/Public/footer.html";i:1505896522;}*/ ?>
 <!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
@@ -568,6 +568,45 @@
                                                 <a href="http://www.gcan.top/index/index/single_page?cc=50.html" class="nav-link ">数据迁移</a>
                                             </li>
 
+                                            <li class="dropdown-submenu ">
+                                                <a href="javascript:;" class="nav-link nav-toggle ">
+                                                    <!--<i class="icon-graph"></i> -->
+                                                    laravel 模型
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class=" ">
+                                                        <a href="http://www.gcan.top/index/index/single_page?cc=51.html" class="nav-link ">新增数据</a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="http://www.gcan.top/index/index/single_page?cc=52.html" class="nav-link ">更新删除数据</a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="http://www.gcan.top/index/index/single_page?cc=54.html" class="nav-link ">数据查询</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class=" ">
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=53.html" class="nav-link ">修改时区</a>
+                                            </li>
+
+                                            <li class=" ">
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=55.html" class="nav-link ">文章列表</a>
+                                            </li>
+
+                                            <li class=" ">
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=56.html" class="nav-link ">登录注册</a>
+                                            </li>
+
+                                            <li class=" ">
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=57.html" class="nav-link ">post提交数据</a>
+                                            </li>
+
+                                            <li class=" ">
+                                                <a href="http://www.gcan.top/index/index/single_page?cc=58.html" class="nav-link ">数据验证</a>
+                                            </li>
+
                                         </ul>
                                     </li>
 
@@ -755,6 +794,24 @@
                                 <a target="_blank" href="http://www.phpcomposer.com/"> Composer
                                     <span class="arrow"></span>
                                 </a>
+                            </li>
+
+                            <li class="menu-dropdown classic-menu-dropdown ">
+                                <a target="_blank" href="JavaScript:;"> 我的简历
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class=" ">
+                                        <a target="_blank" href="http://www.500d.me/resume/2284477947/" class="nav-link ">手机版</a>
+                                    </li>
+                                    <li class=" ">
+                                        <a target="_blank" href="http://www.500d.me/resume/gcan/" class="nav-link ">电脑版1</a>
+                                    </li>
+                                    <li class=" ">
+                                        <a target="_blank" href="/高万耀个人简历.pdf" class="nav-link ">电脑版2</a>
+                                    </li>
+
+                                </ul>
                             </li>
 
 
